@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamezy || About us</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+}
+.wrapper .outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .card{
+  background: #fff;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 100px 20px 20px 100px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  animation: animate 15s linear infinite;
+  animation-delay: calc(3s * var(--delay));
+    margin-top: 591px;
+    margin-left: 547px;
+}
+.outer:hover .card{
+  animation-play-state: paused;
+}
+.wrapper .card:last-child{
+  animation-delay: calc(-3s * var(--delay));
+}
+@keyframes animate {
+  0%{
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  5%, 20%{
+    opacity: 0.4;
+    transform: translateY(100%) scale(0.7);
+  }
+  25%, 40%{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0%) scale(1);
+  }
+  45%, 60%{
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.7);
+  }
+  65%, 100%{
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+}
+.card .content{
+  display: flex;
+  align-items: center;
+}
+.wrapper .card .img{
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  left: -5px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .details{
+  margin-left: 80px;
+}
+.details span{
+  font-weight: 600;
+  font-size: 18px;
+}
+.card a{
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+  transition: all 0.3s ease;
+}
+.card a:hover{
+  transform: scale(0.94);
+}
+
+.aboutdetail div{
+  font-size: 18px;
+    margin-top: 17px;
+    margin-left: 17px;
+    font-weight: bolder;
+    color: #080808;
+    text-align: center;
+    height: 57px;
+}
+.aboutdetail{
+  
+  width: 198px;
+}
+
+</style>
+</head>
+<body>
+
+    {{>navbar}}
+    
+    <div class="aboutdetail">
+
+    <div>Welcome to Gamezy Kids || About Page</div>
+
+        {{!-- <p>This is our Gamezy Kid About page. Here we enjoy our gaming duty's</p> --}}
+    </div>
+
+  <div class="wrapper">
+    <div class="outer">
+      <div class="card" style="--delay:-1;">
+        <div class="content">
+          <div class="img"><img src="images/logo01.jpg" alt=""></div>
+          <div class="details">
+            <span class="name">Shubham Sinha</span>
+            <p>Sniper Expert || PUBG</p>
+          </div>
+        </div>
+        <a href="#">Follow</a>
+      </div>
+      <div class="card" style="--delay:0;">
+        <div class="content">
+          <div class="img"><img src="images/logo01.jpg" alt=""></div>
+          <div class="details">
+            <span class="name">Deepak Sharma</span>
+            <p>Asualt Expert || PUBG</p>
+          </div>
+        </div>
+        <a href="#">Follow</a>
+      </div>
+      <div class="card" style="--delay:1;">
+        <div class="content">
+          <div class="img"><img src="images/logo01.jpg" alt=""></div>
+          <div class="details">
+            <span class="name">Rohit Sharma</span>
+            <p>Bot Killer || PUBG</p>
+          </div>
+        </div>
+        <a href="#">Follow</a>
+      </div>
+      <div class="card" style="--delay:2;">
+        <div class="content">
+          <div class="img"><img src="images/logo01.jpg" alt=""></div>
+          <div class="details">
+            <span class="name">Ronish Khan</span>
+            <p>Squad Leader || PUBG</p>
+          </div>
+        </div>
+        <a href="#">Follow</a>
+      </div>
+      <div class="card" style="--delay:2;">
+        <div class="content">
+          <div class="img"><img src="images/logo01.jpg" alt=""></div>
+          <div class="details">
+            <span class="name">Shubham Tiwari</span>
+            <p>Cover Expert || PUBG</p>
+          </div>
+        </div>
+        <a href="#">Follow</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
